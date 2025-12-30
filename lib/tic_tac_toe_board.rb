@@ -11,7 +11,7 @@ class Row
   def print_row
     if @cell.zero?
       '[X]'
-      elseif @cell == 1
+    elsif @cell == 1
       '[O]'
     else
       '[ ]'
@@ -26,5 +26,5 @@ def print_board(row)
     row_out.push(Row.new(cell).print_row)
   end
 
-  row_out
+  puts row_out.join
 end
