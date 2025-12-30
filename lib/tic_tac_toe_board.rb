@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Printing board using only a method.
 def print_board(row1, row2, row3)
   row1_out = []
   row1.each do |cell|
@@ -25,4 +26,23 @@ def print_board(row1, row2, row3)
       row3_out.push("[ ]")
     end
   end
+end
+
+# Alternate idea for printing the board using class and instance variables.
+class Row
+  attr_accessor :cell
+  
+  def initialize(cell)
+    @cell = cell
+  end
+
+  def print_row
+
+    if @cell == 1
+      "[X]"
+    else
+      "[ ]"
+    end
+  end
+
 end
