@@ -8,7 +8,7 @@ class Row
     @cell = cell
   end
 
-  def self.print_row
+  def print_row
     if @cell.zero?
       '[X]'
       elseif @cell == 1
@@ -23,7 +23,7 @@ end
 def print_board(row)
   row_out = []
   row.each do |cell|
-    row_out.push(Row.print_row(cell))
+    row_out.push(Row.new(cell).print_row)
   end
 
   row_out
