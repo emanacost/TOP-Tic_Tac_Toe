@@ -20,7 +20,7 @@ class Row
 end
 
 # Method that uses Row class to create a row of cells for the board.
-def print_board(row)
+def print_row(row)
   row_out = []
   row.each do |cell|
     row_out.push(Row.new(cell).print_row)
