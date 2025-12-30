@@ -36,7 +36,7 @@ class Row
     @cell = cell
   end
 
-  def print_row
+  def self.print_row
 
     if @cell == 0
       '[X]'
@@ -47,4 +47,13 @@ class Row
     end
   end
 
+end
+
+def print_board(row)
+  row_out = []
+  row.each do |cell|
+    row_out.push(Row.print_row(cell))
+  end
+  
+  row_out
 end
