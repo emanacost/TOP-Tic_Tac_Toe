@@ -8,7 +8,7 @@ class Row
     @cell = cell
   end
 
-  def print_row
+  def print_cell
     if @cell.zero?
       '[X]'
     elsif @cell == 1
