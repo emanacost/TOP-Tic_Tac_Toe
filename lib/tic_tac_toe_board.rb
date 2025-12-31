@@ -23,7 +23,7 @@ end
 def print_row(row)
   row_out = []
   row.each do |cell|
-    row_out.push(Row.new(cell).print_row)
+    row_out.push(Row.new(cell).print_cell)
   end
 
   puts row_out.join
