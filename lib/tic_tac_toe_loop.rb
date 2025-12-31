@@ -12,14 +12,7 @@ def game_loop
   puts 'Welcome to Tic Tac Toe!'
   puts 'Press any key to start the game.'
   gets.chomp
-  playing_game = true
-  while playing_game
-    b = 1
-    while b < 4
-      print_row(eval("row#{b}"))
-      b += 1
-    end
-  end
+  GameLoop.new(row1, row2, row3).print_board
 end
 
 game_loop
@@ -39,6 +32,18 @@ class GameLoop
       print_row(@row2)
       print_row(@row3)
       b += 1
+    end
+  end
+
+  def self.player_move
+    # Logic to handle player moves and update the board state.
+    puts 'Please enter a move. Format: row, column'
+    move = gets.chomp.split(',').map(&:to_i)
+    # Input handling and validation logic here.
+    if move.length == 2 || move[0].between?(0, 2) && move[1].between?(0, 2)
+      puts "Nice! You choose row: #{move[0]} on column: #{move[1]}"
+    else
+      puts 'Invalid input. Please try again.'
     end
   end
 end
