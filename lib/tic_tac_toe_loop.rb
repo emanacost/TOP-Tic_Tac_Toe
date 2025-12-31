@@ -35,11 +35,9 @@ class GameLoop
   def print_board
     b = 0
     while b < 3
-      print_row do
-        print_row(@row1)
-        print_row(@row2)
-        print_row(@row3)
-      end
+      print_row(@row1)
+      print_row(@row2)
+      print_row(@row3)
       b += 1
     end
   end
