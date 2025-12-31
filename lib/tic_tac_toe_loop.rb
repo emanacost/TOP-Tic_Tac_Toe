@@ -37,10 +37,10 @@ class GameLoop
 
   def self.player_move
     # Logic to handle player moves and update the board state.
-    puts 'Please enter a move. Format: row, column'
+    puts 'Please enter a move. Format: row, column. 1-3 for both row and column.'
     move = gets.chomp.split(',').map(&:to_i)
     # Input handling and validation logic here.
-    if move.length == 2 || move[0].between?(0, 2) && move[1].between?(0, 2)
+    if move.length == 2 || move[0].between?(1, 3) && move[1].between?(1, 3)
       puts "Nice! You choose row: #{move[0]} on column: #{move[1]}"
     else
       puts 'Invalid input. Please try again.'
